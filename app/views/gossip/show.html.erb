@@ -1,0 +1,4 @@
+<h1> @gossip.each_with_index do |gossip, index| <h1>
+    <li> <%= link_to "#{@gossip[index].title}", "/gossip/#{@gossip[index].id}" %> </li>
+			<li> <%= @gossip[index].content %> </li>
+			<li> <%= @gossip[index].created_at %> </li>
