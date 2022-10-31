@@ -9,15 +9,15 @@
 </nav>
 <body>
 <h1> Bienvenue sur le site The Gossip Project version 10358 </h1>
-<p> 
+
+
 <% @user.each_with_index do |user, index| %>
+
 			    <li> <%= link_to "#{@user[index].first_name}", "/welcome/#{@user[index].id}" %> </li>
-               <% @user[index].gossips.each do |gossip| %> 
-			    <p> <%= gossip.title %> </p>
+               <% @user[index].gossips.each do |gossip| %>
+			    <li> <%= gossip.title %> </li>
                <% end %>
 <% end %>
 
 
 </p>
-
-</body>
